@@ -99,7 +99,7 @@ const HomePage = () => {
       </section>
 
       {/* Local Map Section */}
-      <MapSection />
+      {/* <MapSection /> */}
 
       {/* Special Offers & Deals */}
       <section className="py-12">
