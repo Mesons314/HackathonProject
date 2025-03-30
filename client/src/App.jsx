@@ -17,6 +17,7 @@ import ProductSearchPage from "@/pages/ProductSearchPage";
 import WishlistPage from "@/pages/WishlistPage";
 import CartPage from "@/pages/CartPage";
 import NotFound from "@/pages/not-found";
+import MapPage from "@/pages/MapPage";
 
 function Router() {
   return (
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/shops/:id" component={ShopDetailPage} />
       <Route path="/explore" component={ProductSearchPage} />
       <Route path="/categories/:category?" component={ProductSearchPage} />
+      <Route path="/map" component={MapPage} />
       <ProtectedRoute path="/wishlist" component={WishlistPage} />
       <ProtectedRoute path="/cart" component={CartPage} />
       <ProtectedRoute 
