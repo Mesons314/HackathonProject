@@ -9,7 +9,7 @@ const pool = new Pool({
   host: process.env.DB_HOST || "localhost",
   port: parseInt(process.env.DB_PORT || "5432"),
   user: process.env.DB_USER || "postgres",
-  password: process.env.DB_PASSWORD || "Beechem@31426",
+  password: process.env.DB_PASSWORD || "Aayush@2005",
   database: process.env.DB_NAME || "postgres",
   max: 10, // Max connections in pool
   idleTimeoutMillis: 30000, // Close idle connections after 30s
@@ -22,6 +22,7 @@ export const db = drizzle(pool);
 // Configure session store with the pool
 const PgSessionStore = pgSession(session);
 export const sessionStore = new PgSessionStore({
+  createTableIfMissing: true, // Create the table if it doesn't exist
   pool, // Use connection pool instead of a single client
   tableName: "session", // Ensure this table exists in your database
 });
