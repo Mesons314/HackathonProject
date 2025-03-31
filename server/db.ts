@@ -22,6 +22,7 @@ export const db = drizzle(pool);
 // Configure session store with the pool
 const PgSessionStore = pgSession(session);
 export const sessionStore = new PgSessionStore({
+  createTableIfMissing: true,
   pool, // Use connection pool instead of a single client
   tableName: "session", // Ensure this table exists in your database
 });

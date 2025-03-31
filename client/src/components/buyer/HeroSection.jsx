@@ -44,7 +44,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <img 
+            <img
               src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
               alt="Local shopping" 
               className="rounded-lg shadow-lg max-h-96 object-cover"
